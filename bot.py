@@ -3,7 +3,7 @@ import yt_dlp
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, CallbackContext
 
-TOKEN = TOKEN
+TOKEN = os.getenv("TOKEN")
 
 async def start(update: Update, context: CallbackContext):
     await update.message.reply_text("Envie um link de vídeo para baixar!")
